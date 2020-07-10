@@ -1,0 +1,26 @@
+@import './media'
+@import './variables'
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;700&display=swap')
+%ed
+    margin: 0
+body
+    font: 300 18px/1.2222222222 "Fira Sans","Helvetica Neue",Helvetica,Arial,sans-serif
+    @extend %ed
+    text-align: center
+    background: url(https://landing-assets.pics.io/img/picsio/bg-intro.jpg) 50% 0 no-repeat #111
+    min-width: 320px
+*
+    box-sizing: border-box
+button:focus
+    outline: none
+.h1, .h2, h1, h2 
+    margin-top: 0
+    margin-bottom: 20px
+p
+    margin: 0 0 1em
+.container
+    margin: 0 auto
+    padding: 0 25px
+    +min_1025
+        max-width: 1200px
+

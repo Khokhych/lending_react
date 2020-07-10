@@ -1,0 +1,170 @@
+{
+  "buttonHeader": "Register",
+  "menu": [{
+      "name": "How it works",
+      "url": "/",
+      "nav": [{
+        "cont": [{
+          "name": "Unrestricted Digital Library",
+          "url": "/"
+        }, {
+          "name": "Collections",
+          "url": "/"
+        }, {
+          "name": "Version Control",
+          "url": "/"
+        }, {
+          "name": "Assets Sharing",
+          "url": "/"
+        }, {
+          "name": "View Sketch online",
+          "url": "/"
+        }, {
+          "name": "File Comparison",
+          "url": "/"
+        }, {
+          "name": "Branding",
+          "url": "/"
+        }, {
+          "name": "Analytics & reporting",
+          "url": "/"
+        }, {
+          "name": "Inboxes",
+          "url": "/"
+        }]
+      }]
+    },
+    {
+      "name": "Pricing",
+      "url": "/"
+    },
+    {
+      "name": "Use Cases",
+      "url": "/",
+      "nav": [{
+          "name": "By Use Cases",
+          "cont": [{
+            "name": "Digital Asset Management",
+            "url": "/"
+          }, {
+            "name": "Creative Project Management",
+            "url": "/"
+          }, {
+            "name": "Brand Asset Management",
+            "url": "/"
+          }]
+        },
+        {
+          "name": "By Industry",
+          "cont": [{
+            "name": "Business",
+            "url": "/"
+          }, {
+            "name": "Designers",
+            "url": "/"
+          }, {
+            "name": "Software Developers",
+            "url": "/"
+          }, {
+            "name": "Schools, colleges, universities",
+            "url": "/"
+          }, {
+            "name": "Non-profits",
+            "url": "/"
+          }, {
+            "name": "Marketing teams",
+            "url": "/"
+          }, {
+            "name": "Home34",
+            "url": "/"
+          }]
+        }
+      ]
+    }, {
+      "name": "Integrations",
+      "url": "/",
+      "nav": [{
+        "cont": [{
+          "name": "Google Drive",
+          "url": "/"
+        }, {
+          "name": "Slack",
+          "url": "/"
+        }, {
+          "name": "Zapier",
+          "url": "/"
+        }, {
+          "name": "Add-ons for G Suite",
+          "url": "/"
+        }, {
+          "name": "Adobe Photoshop",
+          "url": "/"
+        }, {
+          "name": "Adobe Illustrator",
+          "url": "/"
+        }, {
+          "name": "Adobe Premiere Pro",
+          "url": "/"
+        }, {
+          "name": "Adobe After Effects",
+          "url": "/"
+        }, {
+          "name": "Google Docs",
+          "url": "/"
+        }, {
+          "name": "Google Sheets",
+          "url": "/"
+        }, {
+          "name": "Google Forms",
+          "url": "/"
+        }, {
+          "name": "Google Slides",
+          "url": "/"
+        }, {
+          "name": "Zoho CRM",
+          "url": "/"
+        }, {
+          "name": "Easy Projects",
+          "url": "/"
+        }]
+      }]
+    }, {
+      "name": "Resources",
+      "url": "/",
+      "nav": [{
+        "cont": [{
+          "name": "G Suite Maximizer",
+          "url": "/"
+        }, {
+          "name": "Slack",
+          "url": "/"
+        }, {
+          "name": "Smart File Organizer",
+          "url": "/"
+        }, {
+          "name": "DAM Quick Start Guide",
+          "url": "/"
+        }, {
+          "name": "Metadata Playbook",
+          "url": "/"
+        }, {
+          "name": "Book a Demo",
+          "url": "/"
+        }, {
+          "name": "Blog",
+          "url": "/"
+        }, {
+          "name": "Help Center",
+          "url": "/"
+        }]
+      }]
+    }, {
+      "name": "Log in",
+      "url": "/"
+    }
+  ],
+  "intro": {
+    "h1": "Pricing Guide",
+    "p": ["You don’t need a credit card", "to start a 14-day free trial"]
+  }
+}
