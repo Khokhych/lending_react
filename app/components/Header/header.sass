@@ -5,11 +5,11 @@
     color: #fff
     backdrop-filter: blur(3px)
     background-color: rgba(0,0,0,.3)
+    position: fixed
+    top: 0
+    right: 0
+    left: 0
     +max_1025
-        position: fixed
-        top: 0
-        right: 0
-        left: 0
         padding: 10px  0
     a
         display: block
@@ -25,10 +25,11 @@
         align-items: center
         justify-content: space-between
     &_nav
+        margin: auto
+        +min_1025
+            display: flex
+            align-items: center
         &-wrap
-            +min_1025
-                align-items: center
-                display: flex
             +max_1025
                 position: fixed
                 left: 0
@@ -47,6 +48,16 @@
                 overflow-y: auto
                 &-open
                     transform: translate3d(0,0,0)
+            &+.button
+                display: inline-block
+                margin-left: auto
+                margin-right: 20px
+                padding: 5px 25px
+                +max_480
+                    margin-right: 15px
+                    padding: 5px 20px
+                +min_1025
+                    display: none
         &-cont
             list-style: none
             margin: 0
@@ -56,24 +67,24 @@
                 display: flex
         &-item
             position: relative
-            &> div
+            .header_nav-sub
                 +max_1025
                     display: none
+            &-open-sub
+                +max_1025
+                    .header_nav-sub
+                        display: block
             &:hover
                 a
                     +min_1025
                         background-color: rgba(0,0,0,.93)
-                &> div
+                .header_nav-sub
                     visibility: visible
                     opacity: 1
-                    +max_1025
-                        display: block
             &>a
-                
                 +min_1025
                     line-height: 49px
                     padding: 35px 24px
-                
                 &:hover
                     color: $basic-color
                     +min_1025
@@ -132,14 +143,14 @@
             background-color: #fff
             content: " "
             position: absolute
-            left: 0        
+            left: 0
             transition: transform 0.3s ease
         &-open
             &::after
                 transform: translatey(10px) rotate(45deg)
             &::before
                 transform: translatey(-10px) rotate(-45deg)
-            &>div
+            .header_burger-line
                 display: none
         &-line
             display: block

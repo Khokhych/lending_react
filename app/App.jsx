@@ -5,6 +5,7 @@ import './sass/app.sass';
 import Intro from './components/Intro/Intro';
 import Header from './components/Header/Header';
 import Loader from './components/Loader/Loader';
+import Rates from './components/Rates/Rates';
 
 export default () => {
   const dispatch = useDispatch();
@@ -16,9 +17,10 @@ export default () => {
   getData();
   return (
     <div>
-      <Header />
-      <Intro />
-      <Loader />
+      {/* <Header /> */}
+      {/* <Intro /> */}
+      {/* <Loader /> */}
+      <Rates />
     </div>
   );
 };

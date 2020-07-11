@@ -2,12 +2,15 @@
 
 .intro
     color: #fff
+    padding: 230px 0
+    +max_1025
+        padding: 15vh 0 10vh
     &_container
-        padding-top: 230px 
-        padding-bottom: 230px 
     &_h1
         font-size: 60px
         font-weight: 200
+        +max_1025
+            font-size: 40px
     &_text
         font-size: 30px
         font-weight: 300
@@ -16,4 +19,8 @@
         flex-wrap: wrap
         justify-content: center
         flex-direction: column
+        +max_480
+            display: block
+        +max_1025
+            font-size: 28px
 

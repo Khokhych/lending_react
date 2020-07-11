@@ -1,0 +1,49 @@
+@import '../../sass/media'
+
+.switcher
+  color: #CCC
+  font-size: 15px
+  font-weight: 400
+  &-cont
+    display: flex
+    flex-direction: column
+    align-items: center
+  input
+    width: 0
+    height: 0
+    position: relative
+    background: transparent
+    border: none
+    margin: 25px 15px
+    &:checked
+      &::after
+        top: auto
+        bottom: 3px
+    &::before,
+    &::after
+      margin: -25px -15px
+
+    &::before
+      display: block
+      content: " "
+      width: 27px
+      height: 45px
+      border: 2px solid #272727
+      background: #333
+      border-radius: 20px
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 1
+    &::after
+      display: block
+      content: " "
+      border: 1px solid rgba(0,0,0,.2)  
+      background: #CCC
+      width: 23px
+      height: 23px
+      border-radius: 50%
+      position: absolute
+      top: 3px
+      left: 3px
+      z-index: 2

@@ -165,6 +165,200 @@
   ],
   "intro": {
     "h1": "Pricing Guide",
-    "p": ["You don’t need a credit card", "to start a 14-day free trial"]
+    "p": ["You don’t need a credit card", " to start a 14-day free trial"]
+  },
+  "switcher": {
+    "first": "Monthly",
+    "second": {
+      "name": "Annual",
+      "desc": " (2 months free)"
+    }
+  },
+  "rates": {
+    "items": [{
+      "name": "Free",
+      "desc": "from",
+      "descLong": "Individual users, freelancers",
+      "buttonText": "Try it for Free",
+      "price": {
+        "currency": "$",
+        "wrap": {
+          "monthly": {
+            "per": "/yr",
+            "amount": "1200"
+          },
+          "annual": {
+            "per": "/mo",
+            "amount": "120"
+          }
+        }
+      },
+      "options": [
+        ["1", "2", "3", "4", {
+          "text": "5"
+        }],
+        ["6", "7", "8", {
+          "text": "9"
+        }, "10"]
+      ]
+    }, {
+      "name": "Free",
+      "desc": "from",
+      "descLong": "Individual users, freelancers",
+      "buttonText": "Try it for Free",
+      "price": {
+        "currency": "$",
+        "wrap": {
+          "monthly": {
+            "per": "/yr",
+            "amount": "1200"
+          },
+          "annual": {
+            "per": "/mo",
+            "amount": "120"
+          }
+        }
+      },
+      "options": [
+        ["full", "middle", "unlimited", "none", {
+          "text": "Accessible every 60 minutes"
+        }],
+        ["unlimited", "middle", "none", {
+          "text": "Accessible every 60 minutes"
+        }, "full"]
+      ]
+    }, {
+      "name": "Free",
+      "desc": "from",
+      "descLong": "Individual users, freelancers",
+      "buttonText": "Try it for Free",
+      "price": {
+        "currency": "$",
+        "wrap": {
+          "monthly": {
+            "per": "/yr",
+            "amount": "1200"
+          },
+          "annual": {
+            "per": "/mo",
+            "amount": "120"
+          }
+        }
+      },
+      "options": [
+        ["full", "middle", "unlimited", "none", {
+          "text": "Accessible every 60 minutes"
+        }],
+        ["unlimited", "middle", "none", {
+          "text": "Accessible every 60 minutes"
+        }, "full"]
+      ]
+    }, {
+      "name": "Free",
+      "desc": "from",
+      "descLong": "Individual users, freelancers",
+      "buttonText": "Try it for Free",
+      "price": {
+        "currency": "$",
+        "wrap": {
+          "monthly": {
+            "per": "/yr",
+            "amount": "1200"
+          },
+          "annual": {
+            "per": "/mo",
+            "amount": "120"
+          }
+        }
+      },
+      "options": [
+        ["full", "middle", "unlimited", "none", {
+          "text": "Accessible every 60 minutes"
+        }],
+        ["unlimited", "middle", "none", {
+          "text": "Accessible every 60 minutes"
+        }, "full"]
+      ]
+    }, {
+      "name": "Free",
+      "desc": "from",
+      "descLong": "Individual users, freelancers",
+      "buttonText": "Try it for Free",
+      "price": {
+        "currency": "$",
+        "wrap": {
+          "monthly": {
+            "per": "/yr",
+            "amount": "1200"
+          },
+          "annual": {
+            "per": "/mo",
+            "amount": "120"
+          }
+        }
+      },
+      "options": [
+        ["full", "middle", "unlimited", "none", {
+          "text": "Accessible every 60 minutes"
+        }],
+        ["unlimited", "middle", "none", {
+          "text": "Accessible every 60 minutes"
+        }, "full"]
+      ]
+    }, {
+      "name": "Free",
+      "desc": "from",
+      "descLong": "Individual users, freelancers",
+      "buttonText": "Try it for Free",
+      "price": {
+        "currency": "$",
+        "wrap": {
+          "monthly": {
+            "per": "/yr",
+            "amount": "1200"
+          },
+          "annual": {
+            "per": "/mo",
+            "amount": "120"
+          }
+        }
+      },
+      "options": [
+        ["full", "middle", "unlimited", "none", {
+          "text": "Accessible every 60 minutes"
+        }],
+        ["01", "02", "03", {
+          "text": "04"
+        }, "05"]
+      ]
+    }],
+    "optionsNames": [
+      ["Basic DAM functionality", {
+        "name": "Uploading 1",
+        "desc": "Get in touch with our Sales team to discuss."
+      }, {
+        "name": "Uploading 2",
+        "desc": "Get in touch with our Sales team to discuss."
+      }, {
+        "name": "Uploading 3",
+        "desc": "Get in touch with our Sales team to discuss."
+      }, {
+        "name": "Uploading 4",
+        "desc": "Get in touch with our Sales team to discuss."
+      }],
+      ["Basic DAM functionality 2", {
+        "name": "Uploading 21",
+        "desc": "Get in touch with our Sales team to discuss."
+      }, {
+        "name": "Uploading 22",
+        "desc": "Get in touch with our Sales team to discuss."
+      }, {
+        "name": "Uploading 23",
+        "desc": "Get in touch with our Sales team to discuss."
+      }, {
+        "name": "Uploading 24",
+        "desc": "Get in touch with our Sales team to discuss."
+      }]
+    ]
   }
 }
