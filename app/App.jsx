@@ -6,6 +6,7 @@ import Intro from './components/Intro/Intro';
 import Header from './components/Header/Header';
 import Loader from './components/Loader/Loader';
 import Rates from './components/Rates/Rates';
+import Svg from './components/Svg/Svg';
 
 export default () => {
   const dispatch = useDispatch();
@@ -17,10 +18,12 @@ export default () => {
   getData();
   return (
     <div>
-      {/* <Header /> */}
-      {/* <Intro /> */}
-      {/* <Loader /> */}
+      <Svg />
+      <Header />
+      <Intro />
+      <Loader />
       <Rates />
+
     </div>
   );
 };

@@ -1,14 +1,198 @@
 @import '../../sass/media'
+@import '../../sass/variables'
 
 .rates
     color: #fff
+
+    &_item
+        display: none
+        &-count-6
+            +min_1025
+                display: block
+        &-count-3
+            +f_820_t_1025
+                display: block
+        &-count-2
+            +f_630_t_820
+                display: block
+        &-count-1
+            +max_630
+                display: block
+        &-cont
+            margin-top: 40px
+    &_container
+        max-width: 1330px
+    &_item-carts
+        display: grid
+        grid-template-rows: 1fr
+        grid-template-columns: repeat(7,1fr)
+        grid-row-gap: 0
+        grid-column-gap: 20px
+        +f_820_t_1025
+            grid-template-columns: repeat(3,1fr)
+        +f_630_t_820
+            grid-template-columns: repeat(2,1fr)
+        +max_630
+            display: flex
+            justify-content: space-around
+
     &_carts
-        display: flex
         &-item
-            list-style: none
+            &-name
+                padding: 17px 0 30px
+                line-height: 1
+                font-size: 18px
+                font-weight: 700
+            &-desc
+                font-size: 12px
+            &-desc-long
+                min-height: 95px
+                line-height: 18px
+                font-size: 15px
+                font-weight: 400
+            &-img
+                img
+                    margin: -28px 0 16px
+                    width: 95px
+            &-price
+                padding-bottom: 22px
+                &-currency
+                    margin: -2px 0 0 -8.5px
+                    padding: 0 2px 0 0
+                    vertical-align: top
+                    font-size: 16px
+                    position: relative
+                    top: 0
+                &-amount
+                    line-height: 52px
+                    letter-spacing: -4px
+                    font-size: 54px
+                    font-weight: 700
+                &-per
+                    align-self: flex-end
+                    margin: 0 -7.5px 3px 0
+                    vertical-align: bottom
+                    font-size: 12px
+                    font-weight: 400
+                    position: relative
+                    bottom: 3px
+                    left: 1px
             &-cont
+                margin: 0 0 20px
+                border-radius: 10px
                 display: flex
                 flex-direction: column
-.eee
-    display: flex
-    justify-content: space-evenly
+                padding: 10px 15px
+            .button
+                width: 100%
+                margin-bottom: 20px
+                border: 0
+                border-radius: 10px
+                color: #fff
+                font-size: 15px
+                font-weight: 700
+                padding-left: 10px
+                padding-right: 10px
+                &:hover
+                    
+            &_0
+                .rates_carts-item-cont
+                    background-color: #0B74AD
+                .button
+                    background-color: #0B74AD
+            &_1
+                .rates_carts-item-cont
+                    background-color: #00529C
+                .button
+                    background-color: #00529C
+            &_2
+                .rates_carts-item-cont
+                    background-color: #91469B
+                .button
+                    background-color: #91469B
+            &_3
+                .rates_carts-item-cont
+                    background-color: #E5065B
+                .button
+                    background-color: #E5065B
+            &_4
+                .rates_carts-item-cont
+                    background-color: #00853E
+                .button
+                    background-color: #00853E
+            &_5
+                .rates_carts-item-cont
+                    background-color: $basic-color
+                    color: #000
+                .button
+                    background-color: $basic-color
+                    color: #000
+    &_options
+        &-item
+            margin-top: 40px
+            border-bottom: 1px solid #222
+        &-row
+            display: grid
+            grid-template-columns: repeat(7,1fr)
+            grid-template-rows: 1fr
+            grid-row-gap: 0
+            +f_820_t_1025
+                grid-template-columns: .8fr .2fr repeat(2,1fr)
+            +f_630_t_820
+                grid-template-columns: .7fr .3fr 1fr
+            +max_630
+                grid-template-columns: repeat(2,1fr)
+            &:not(:first-child)
+                height: 100px
+                display: none
+            &:first-child
+                padding-bottom: 20px
+                position: relative
+                z-index: 2
+                &.rates_options-row-open
+                    &:before
+                        transform: rotate(0deg)
+                &:before
+                    color: #999
+                    transform: rotate(-90deg)
+                    position: absolute
+                    left: 0
+                    z-index: 1
+                    top: 3px
+                    transition: all .3s
+                    width: 15px
+                    height: 15px
+                    overflow: hidden
+                    text-align: center
+                    line-height: 15px
+                    font-family: monospace
+                    font-size: 15px
+                    content: "\25BC"
+                    user-select: none
+            &:nth-child(2n+2)
+                background: #1C1C1C
+            &:nth-child(2n+3)
+                background: #151515
+            &-button
+                position: absolute
+            &-open
+                &~.rates_options-row 
+                    display: grid
+            
+        &-cell
+            display: flex
+            align-items: center
+            &:nth-child(1n+2)
+                justify-content: center
+            &:first-of-type
+                text-align: left
+                cursor: pointer
+                padding-left: 25px
+                color: #999
+                font-size: 18px
+                font-weight: 700
+                padding-right: 12px
+                max-width: 170px
+            .svg-icon
+                width: 20px
+                height: 10px

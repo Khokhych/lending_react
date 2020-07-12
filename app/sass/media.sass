@@ -10,12 +10,25 @@
     @content
 
 // max
+
+
 =max_480
   @media screen and (max-width: 480px)
+    @content
+=max_630
+  @media screen and (max-width: 630px) 
     @content
 =max_768
   @media screen and (max-width: 768px)
     @content
 =max_1025
   @media screen and (max-width: 1025px)
+    @content
+// max min
+
+=f_820_t_1025
+  @media screen and (min-width: 821px) and (max-width: 1025px) 
+    @content
+=f_630_t_820
+  @media screen and (min-width: 631px) and (max-width: 820px) 
     @content

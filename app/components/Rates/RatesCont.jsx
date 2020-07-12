@@ -1,108 +1,128 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import Switcher from '../Switcher/Switcher';
+import Button from '../Button/Button';
 
 export default (props) => {
-
   const rates = useSelector((state) => state.data.rates);
-  const count = props.elementsOnOneLine ? props.elementsOnOneLine : 6;
-  const carts = [];
-  const cartsOptions = [];
-  let cartsChunk;
+  const switcher = useSelector((state) => state.switcher.switch);
 
-  if(rates){
+  const [openRowsOptions, setOpenRowsOptions] = useState([]);
+
+  const count = props.elementsOnOneLine ? +props.elementsOnOneLine : 6;
+
+  const carts = [];
+  let cartsChunk;
+  const cartsOptions = [];
+
+  const clickRowOptions = (e) => {
+    const index = +e.target.getAttribute('index');
+    if (openRowsOptions.find((e) => e === index)) {
+      const indexDelete = openRowsOptions.findIndex((e) => e === index);
+      const arr = openRowsOptions.slice();
+      arr.splice(indexDelete, 1);
+      setOpenRowsOptions([...arr]);
+      return;
+    }
+    setOpenRowsOptions([...openRowsOptions, index]);
+  };
+
+  if (rates) {
     for (let index = 0; index < rates.items.length; index++) {
-      let item = rates.items[index];
+      const item = rates.items[index];
       carts.push(
-        <li className="rates_carts-item" key={index}>
-      <div className="rates_carts-item-cont">
-        <span className="rates_carts-item-name">
-          {item.name}
-        </span>
-        <span className="rates_carts-item-desc">
-          {item.desc}
-        </span>
-        <span className="rates_carts-item-price">
-          <span className="rates_carts-item-price-">
-            {item.price.currency}
-          </span>
-          <span className="rates_carts-item-price-">
-            {item.price.wrap.annual.amount}
-          </span>
-          <span className="rates_carts-item-price-">
-            {item.price.wrap.annual.per}
-          </span>
-        </span>
-        <span className="rates_carts-item-desc">
-          {item.descLong}
-        </span>
-      </div>
-      <span className="rates_carts-item-desc">
-        {item.buttonText}
-      </span>
-    </li>
+        <div className={`rates_carts-item rates_carts-item_${index}`} key={index}>
+          <div className="rates_carts-item-cont">
+            <span className="rates_carts-item-name">
+              {item.name}
+            </span>
+            <span className="rates_carts-item-desc">
+              {item.desc}
+            </span>
+            {!item.img
+              ? (
+                <span className="rates_carts-item-price">
+                  <span className="rates_carts-item-price-currency">
+                    {item.price.currency}
+                  </span>
+                  <span className="rates_carts-item-price-amount">
+                    {switcher ? item.price.wrap.monthly.amount : item.price.wrap.annual.amount}
+                  </span>
+                  <span className="rates_carts-item-price-per">
+                    {switcher ? item.price.wrap.monthly.per : item.price.wrap.annual.per}
+                  </span>
+                </span>
+              )
+              : (
+                <span className="rates_carts-item-img">
+                  <img src={item.img} alt="" />
+                </span>
+              )}
+            <span className="rates_carts-item-desc-long">
+              {item.descLong}
+            </span>
+          </div>
+          <Button text={item.buttonText} bgAndNoHover="true" />
+        </div>
       );
     }
 
-    const f= (out, i, o)=>{
+    const getOptions = (out, i, o) => {
       const maxChar = count * (out + 1);
-      const items  = []
+      const items = [];
 
-      for(let w = count * out; w < maxChar; w++){
-        if(rates.items[w]){
+      for (let w = count * out; w < maxChar; w++) {
+        if (rates.items[w]) {
           items.push(
-          <p>
-            {rates.items[w].options[i][o].text ? rates.items[w].options[i][o].text : rates.items[w].options[i][o]}
-          </p>
+            <span className="rates_options-cell">
+              {rates.items[w].options[i][o].text
+                ? rates.items[w].options[i][o].text
+                : <svg className="svg-icon"><use xlinkHref={`#icon-support-${rates.items[w].options[i][o]}`} /></svg>}
+            </span>,
           );
         }
       }
-      
+
       return items;
-    }
-
+    };
     const arr = [];
-    for(let out = 0; out < rates.items.length/count; out++){
+    for (let out = 0; out < rates.items.length / count; out++) {
       for (let i = 0; i < rates.optionsNames.length; i++) {
-        let item = rates.optionsNames[i];
-            arr.push(<div className="rates_carts-item" key={i}>
-            {item.map((elem, o) => (
-              <div className="eee">
-                
-                <span>
-                  {o === 0 && <span>></span>}
-                  {elem.name ? elem.name : elem}
-                </span>
-                {f(out, i, o)}
-
-              </div>
-            ))}
-          </div>);
+        const item = rates.optionsNames[i];
+        arr.push(<div className="rates_options-item" key={i}>
+          {item.map((elem, o) => (
+            <div className={`rates_options-row ${openRowsOptions.find((e) => e === +`1${out}${i}${o}`) ? 'rates_options-row-open' : ''}`}>
+              <span className="rates_options-cell" index={+`1${out}${i}${o}`} onClick={o === 0 ? clickRowOptions : null}>
+                {elem.name ? elem.name : elem}
+              </span>
+              {getOptions(out, i, o)}
+            </div>
+          ))}
+                 </div>);
       }
-      cartsOptions.push([...arr])
+      cartsOptions.push([...arr]);
       arr.length = 0;
     }
-
   }
-  const chunk = (arr, size) =>
-    Array.from({ length: Math.ceil(arr.length / size) }, (v, i) =>
-    arr.slice(i * size, i * size + size)
-  );
-  if(count && carts.length){
-    cartsChunk = chunk(carts ,count );
+  const chunk = (arr, size) => Array.from({ length: Math.ceil(arr.length / size) }, (v, i) => arr.slice(i * size, i * size + size));
+  if (count && carts.length) {
+    cartsChunk = chunk(carts, count);
   }
 
   return (
     <div className={`rates_item rates_item-count-${count}`}>
-        <Switcher />
-            <div>
-              {cartsOptions.map((item,index)=>(
-                  <div>
-                    {cartsChunk[index] && cartsChunk[index]}
-                    {item}
-                  </div>
-              ))}
-            </div>
+      {count < 6 ? <Switcher /> : '' }
+      {cartsOptions.map((item, index) => (
+        <div className="rates_item-cont">
+          <div className="rates_item-carts">
+            {count === 6 ? <Switcher /> : '' }
+            {cartsChunk ? cartsChunk[index] : ''}
+          </div>
+          <div className="rates_options">
+            {item}
+          </div>
+        </div>
+      ))}
     </div>
   );
 };

@@ -4,21 +4,35 @@
   color: #CCC
   font-size: 15px
   font-weight: 400
+  display: flex
+  align-items: center
+  justify-content: center
+  &-text
+    display: flex
+    flex-direction: column
+    +max_1025
+      margin: 0 25px
+      &-sub
+        &:last-child
+          font-size: 12px
   &-cont
     display: flex
     flex-direction: column
     align-items: center
-  input
+    +max_1025
+      flex-direction: row
+  &-checkbox
     width: 0
     height: 0
     position: relative
     background: transparent
     border: none
     margin: 25px 15px
-    &:checked
+    +max_1025
+      transform: rotate(-90deg)
+    &-check
       &::after
-        top: auto
-        bottom: 3px
+        top: 3px
     &::before,
     &::after
       margin: -25px -15px
@@ -44,6 +58,6 @@
       height: 23px
       border-radius: 50%
       position: absolute
-      top: 3px
+      bottom: 3px
       left: 3px
       z-index: 2

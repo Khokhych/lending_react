@@ -194,33 +194,7 @@
         }
       },
       "options": [
-        ["1", "2", "3", "4", {
-          "text": "5"
-        }],
-        ["6", "7", "8", {
-          "text": "9"
-        }, "10"]
-      ]
-    }, {
-      "name": "Free",
-      "desc": "from",
-      "descLong": "Individual users, freelancers",
-      "buttonText": "Try it for Free",
-      "price": {
-        "currency": "$",
-        "wrap": {
-          "monthly": {
-            "per": "/yr",
-            "amount": "1200"
-          },
-          "annual": {
-            "per": "/mo",
-            "amount": "120"
-          }
-        }
-      },
-      "options": [
-        ["full", "middle", "unlimited", "none", {
+        ["middle", "full", "unlimited", "none", {
           "text": "Accessible every 60 minutes"
         }],
         ["unlimited", "middle", "none", {
@@ -327,9 +301,35 @@
         ["full", "middle", "unlimited", "none", {
           "text": "Accessible every 60 minutes"
         }],
-        ["01", "02", "03", {
-          "text": "04"
-        }, "05"]
+        ["unlimited", "middle", "none", {
+          "text": "Accessible every 60 minutes"
+        }, "full"]
+      ]
+    }, {
+      "name": "Free",
+      "descLong": "Individual users, freelancers",
+      "buttonText": "Try it for Free",
+      "img": "https://landing-assets.pics.io/img/newlanding/building.svg",
+      "price": {
+        "currency": "$",
+        "wrap": {
+          "monthly": {
+            "per": "/yr",
+            "amount": "1200"
+          },
+          "annual": {
+            "per": "/mo",
+            "amount": "120"
+          }
+        }
+      },
+      "options": [
+        ["full", "middle", "unlimited", "none", {
+          "text": "Accessible every 60 minutes"
+        }],
+        ["unlimited", "middle", "none", {
+          "text": "Accessible every 60 minutes"
+        }, "full"]
       ]
     }],
     "optionsNames": [
