@@ -11,12 +11,20 @@ body
     background-image: url(https://landing-assets.pics.io/img/picsio/bg-intro.jpg) 
     min-width: 320px
 *
+img
+    max-width: 100%
+    height: auto
+
     box-sizing: border-box
 button:focus
     outline: none
 .h1, .h2, h1, h2 
     margin-top: 0
     margin-bottom: 20px
+h2
+    font-size: 32px
+    line-height: 1.125
+    font-weight: 300
 p
     margin: 0 0 1em
 svg
@@ -30,6 +38,7 @@ svg
 .container
     margin: 0 auto
     padding: 0 25px
+    box-sizing: border-box
     +min_1025
         max-width: 1200px
 

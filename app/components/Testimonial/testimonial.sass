@@ -1,0 +1,79 @@
+@import '../../sass/media'
+
+.testimonial
+    margin: 200px 0 125px
+    color: #c1c1c1
+    &_container
+        padding: 0
+    blockquote
+        width: 75%
+        margin: 0 auto
+        padding: 0
+        position: relative
+        display: block
+        +max_768
+            width: 95%
+        &::before 
+            font-family: 'Fira Sans',Helvetica,Arial,sans-serif
+            font-weight: 700
+            position: absolute
+            font-size: 12em
+            line-height: 1
+            color: #fc0
+            top: -83px
+            left: -100px
+            z-index: 2
+            content: "\201C"
+            +max_768
+                top: -90px
+                left: -5px
+    q
+        border-radius: 6px
+        display: block
+        padding: 10px 15px 20px
+        background-image: linear-gradient(to top right,#1e1e1e 10%,transparent 100%)
+        position: relative
+        font-weight: 400
+        +max_480
+            padding: 35px
+        &::after 
+            content: ''
+            position: absolute
+            top: 100%
+            left: 30px
+            height: 0
+            width: 0
+            border-top: 20px solid #1e1e1e
+            border-left: 31px solid transparent
+        
+        &::before
+            font-weight: 700
+            position: absolute
+            font-size: 6em
+            line-height: 1
+            color: #fc0
+            bottom: -105px
+            right: -50px
+            z-index: 2
+            content: "\201D"
+            +max_768
+                bottom: -110px
+                right: -5px
+    cite
+        display: flex
+        align-items: center
+        margin: 20px 50px 0 75px
+        font-style: normal
+        +max_375
+            flex-wrap: wrap
+    &_author
+        display: flex
+        flex-direction: column
+        +max_375
+            margin-bottom: 20px
+        &-name
+            font-weight: 400
+            color: #fff
+        &-img
+            margin-left: 12px
+            display: block

@@ -1,0 +1,116 @@
+@import '../../sass/media'
+@import '../../sass/variables'
+
+.footer
+    color: #fff
+    font-size: 16px
+    padding: 40px 0
+    margin-top: 80px
+    a
+        text-decoration: none
+        color: #fff
+    ul
+        list-style: none
+        padding: 0
+        font-weight: 300
+        line-height: 25px
+        margin: 0 0 50px 0
+    &_top
+        display: flex
+        flex-wrap: wrap
+    &_link-big
+        font-weight: 700
+        color: #fff
+    &_item
+        padding: 0 10px
+        box-sizing: border-box
+        text-align: left
+        box-sizing: border-box
+        &-sub
+            display: flex
+            justify-content: space-between
+            +max_480
+                flex-direction: column
+            &-item
+                flex: 0 0 50%
+                padding-right: 10px
+                +max_480
+                    flex: 0 0 100%
+        &-sub-item-title
+            font-weight: 700
+            color: #999
+        a
+            &:hover
+                color: $basic-color
+        &-title
+            font-size: 30px
+            font-weight: 300
+            margin-bottom: 10px
+            padding-bottom: 3px
+            color: #999
+            border-bottom: 1px solid #3c3c3c
+        +min_320
+            flex: 0 0 100%
+        +min_480
+            flex: 0 0 50%
+        +min_768
+            flex: 0 0 25%
+    &_sub
+        +min_480
+            flex: 0 0 100%
+
+        +min_768
+            flex: 0 0 50%
+    &_social
+        margin: 20px 0 50px 0
+        +max_480
+            order: 5
+            ul
+                margin: 0
+        &-list
+            display: flex
+        &-item
+            margin: 0 10px 0 0
+            a
+                background-color: #fff
+                color: #111
+                font-size: 24px
+                width: 39px
+                height: 39px
+                border-radius: 50%
+                display: flex
+                justify-content: center
+                align-items: center
+                svg
+                    color: #fff
+                    width: 24px
+                    height: 24px
+    &_copyright
+        color: #999
+        margin: 0
+    &_bottom
+        line-height: 16px
+        font-size: 14px
+        text-align: left
+        +min_768
+            width: 50%
+            padding: 0 10px
+        &-logo
+            margin-bottom: 10px
+            padding-bottom: 13px
+            border-bottom: 1px solid #3c3c3c
+        &-links
+            a
+                position: relative
+                display: inline-block
+                &::after
+                    content: " | "
+                    display: inline
+                &:last-child
+                    &::after
+                        display: none
+                &:hover
+                    color: $basic-color
+                    &::after
+                        color: #fff
+                        

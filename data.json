@@ -360,5 +360,144 @@
         "desc": "Get in touch with our Sales team to discuss."
       }]
     ]
+  },
+  "testimonial": {
+    "text": "For somebody getting in touch for the first time with classical dam-services, it is a perfect starter with more than fair pricing and a 24/7 scaling option for all features.",
+    "author": {
+      "name": "Benjamin Frischbier",
+      "position": "Art Direction",
+      "company": "SAE Institute GmbH",
+      "authorLogo": "https://landing-assets.pics.io/img/picsio/client-sae-institute.png"
+    }
+  },
+  "Faq": {
+    "title": "Pricing FAQ",
+    "list": [{
+      "title": "How does the 14-day free trial work?",
+      "text": "It’s simple. After you have registered in Pics.io, you are automatically given a 14-day free trial period. No credit card or any other personal information is required to get access to the free trial period. <br><br> During this time you have unlimited access to all Pics.io features and you can fully explore its capabilities. After this period is over, you can pick a convenient billing plan."
+    }, {
+      "title": "What if we need a little more time than 14 days to test Pics.io?",
+      "text": "No problem. If you feel that you need some more time to evaluate Pics.io before you can decide which billing plan to choose, just let us know. Contact us at <a href='mailto:support@pics.io'>support@pics.io</a>, and we’ll be happy to extend your trial period."
+    }]
+  },
+  "footer": {
+    "company": {
+      "title": "Company",
+      "links": [{
+        "name": "About us",
+        "link": "/"
+      }, {
+        "name": "Status page",
+        "link": "/"
+      }, {
+        "name": "Blog",
+        "link": "/"
+      }]
+    },
+    "howItWorks": {
+      "title": "how It Works",
+      "links": [{
+        "name": "About us",
+        "link": "/"
+      }, {
+        "name": "Status page",
+        "link": "/"
+      }, {
+        "name": "Blog",
+        "link": "/"
+      }]
+    },
+    "integrations": {
+      "title": "Integrations",
+      "links": [{
+        "name": "About us",
+        "link": "/"
+      }, {
+        "name": "Status page",
+        "link": "/"
+      }, {
+        "name": "Blog",
+        "link": "/"
+      }]
+    },
+    "solutions": {
+      "title": "Solutions",
+      "sub": [{
+        "title": "By Use Cases",
+        "links": [{
+          "name": "About us",
+          "link": "/"
+        }, {
+          "name": "Status page",
+          "link": "/"
+        }, {
+          "name": "Blog",
+          "link": "/"
+        }]
+      }, {
+        "title": "By Industry",
+        "links": [{
+          "name": "About us",
+          "link": "/"
+        }, {
+          "name": "Status page",
+          "link": "/"
+        }, {
+          "name": "Blog",
+          "link": "/"
+        }]
+      }]
+    },
+    "otherProducts": {
+      "title": "Other products",
+      "sub": [{
+        "links": [{
+          "name": "About us",
+          "link": "/",
+          "big": true
+        }, {
+          "name": "Status page",
+          "link": "/"
+        }, {
+          "name": "Blog",
+          "link": "/"
+        }]
+      }, {
+        "links": [{
+          "name": "About us",
+          "link": "/",
+          "big": true
+        }, {
+          "name": "Status page",
+          "link": "/"
+        }, {
+          "name": "Blog",
+          "link": "/"
+        }]
+      }]
+    },
+    "socials": [{
+        "name": "facebook",
+        "linl": "https://www.facebook.com/toptechphoto"
+      },
+      {
+        "name": "twitter",
+        "linl": "https://www.facebook.com/toptechphoto"
+      }, {
+        "name": "linkedIn",
+        "linl": "https://www.facebook.com/toptechphoto"
+      }
+    ],
+    "copyright": "Copyright © 2009-2020 TopTechPhoto. All rights reserved.",
+    "footerTools": [{
+      "name": "Terms of Service",
+      "link": "/"
+    }, {
+      "name": "Privacy Policy",
+      "link": "/"
+    }, {
+      "name": "Cookies Policy",
+      "link": "/"
+    }]
   }
 }
