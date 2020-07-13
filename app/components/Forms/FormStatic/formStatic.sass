@@ -1,0 +1,91 @@
+@import '../../../sass/media'
+@import '../../../sass/variables'
+
+.form_static
+  max-width: 1200px
+  margin: 200px auto
+  border-radius: 6px
+  +min_1025
+    padding: 0 25px
+  +max_1025
+    margin: 15vw 25px
+  &-benefits
+    display: flex
+    justify-content: center
+    +max_768
+      flex-direction: column
+    &-item
+      +max_768
+        display: flex
+        flex-direction: column
+        align-items: center
+        height: 35px
+
+      &::before,
+      &::after
+        position: relative
+        top: -3px
+      &::before
+        content: ""
+        display: inline-block
+        border-radius: 50%
+        width: 6px
+        height: 6px
+        background-color: #999
+        margin: 0 35px
+        +max_1025
+          margin: 0 10px
+      &:last-child
+        &::after
+          content: ""
+          display: inline-block
+          border-radius: 50%
+          width: 6px
+          height: 6px
+          background-color: #999
+          margin: 0 35px
+          +max_1025
+            margin: 0 10px
+            top: 3px
+        
+  &-top
+    background-color: #303030
+    text-align: center
+    border-radius: 6px 6px 0 0
+    color: #fff
+    padding: 30px
+  &-title
+    font-weight: 600
+    margin-bottom: 10px
+    font-size: 30px
+    +min_480
+      font-size: 30px
+      margin-bottom: 20px
+    +min_768
+      font-size: 44px
+    +min_1025
+      font-size: 57px
+      
+  &-bottom
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: #242424
+    padding: 30px
+    border-radius: 0 0 6px 6px
+    +max_768
+      flex-direction: column
+    .form_input
+      margin-bottom: 0
+    .button,
+    .form_input
+      width: 280px
+      height: 50px
+      margin: 0 8px
+      +max_768
+        padding: 0 8px
+        width: 100%
+        margin-bottom: 16px
+    .form_input-label
+      display: none
+

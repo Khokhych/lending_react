@@ -83,6 +83,7 @@
                 display: flex
                 flex-direction: column
                 padding: 10px 15px
+                min-height: 260px
             .button
                 width: 100%
                 margin-bottom: 20px
@@ -182,6 +183,36 @@
         &-cell
             display: flex
             align-items: center
+            position: relative
+            &-i
+                color: #000
+                font-size: 12px
+                width: 13px
+                height: 13px
+                border-radius: 50%
+                display: block
+                background: #999
+                line-height: 15px
+                margin-left: 5px
+                text-align: center
+                font-family: monospace
+                flex-shrink: 0
+                &:hover
+                    &~.rates_options-cell-pop
+                        display: block
+
+            &-pop
+                display: none
+                position: absolute
+                border-radius: 10px
+                padding: 20px
+                bottom: calc(100% - 30px)
+                left: 0
+                width: 400px
+                box-sizing: border-box
+                max-width: calc(100vw - 50px)
+                background: #000
+                color: #fff
             &:nth-child(1n+2)
                 justify-content: center
             &:first-of-type
@@ -193,6 +224,8 @@
                 font-weight: 700
                 padding-right: 12px
                 max-width: 170px
+                position: relative
+                z-index: 2
             .svg-icon
                 width: 20px
                 height: 10px

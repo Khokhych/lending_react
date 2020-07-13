@@ -159,8 +159,7 @@
         }]
       }]
     }, {
-      "name": "Log in",
-      "url": "/"
+      "name": "Log in"
     }
   ],
   "intro": {
@@ -185,11 +184,11 @@
         "wrap": {
           "monthly": {
             "per": "/yr",
-            "amount": "1200"
+            "amount": "1100"
           },
           "annual": {
             "per": "/mo",
-            "amount": "120"
+            "amount": "110"
           }
         }
       },
@@ -211,11 +210,11 @@
         "wrap": {
           "monthly": {
             "per": "/yr",
-            "amount": "1200"
+            "amount": "900"
           },
           "annual": {
             "per": "/mo",
-            "amount": "120"
+            "amount": "90"
           }
         }
       },
@@ -333,31 +332,35 @@
       ]
     }],
     "optionsNames": [
-      ["Basic DAM functionality", {
-        "name": "Uploading 1",
-        "desc": "Get in touch with our Sales team to discuss."
+      [{
+        "name": "Embrace your digital content 1"
       }, {
-        "name": "Uploading 2",
-        "desc": "Get in touch with our Sales team to discuss."
+        "name": "Embrace your digital content 2",
+        "desc": "Accessible every 60 minutes2--"
       }, {
-        "name": "Uploading 3",
-        "desc": "Get in touch with our Sales team to discuss."
+        "name": "Embrace your digital content 3",
+        "desc": "Accessible every 60 minutes 3--"
       }, {
-        "name": "Uploading 4",
-        "desc": "Get in touch with our Sales team to discuss."
+        "name": " Embrace your digital content 4",
+        "desc": "Accessible every 60 minutes 4--"
+      }, {
+        "name": "Embrace your digital content 5",
+        "desc": "Accessible every 60 minutes 5--"
       }],
-      ["Basic DAM functionality 2", {
-        "name": "Uploading 21",
-        "desc": "Get in touch with our Sales team to discuss."
+      [{
+        "name": "Embrace your digital content 6"
       }, {
-        "name": "Uploading 22",
-        "desc": "Get in touch with our Sales team to discuss."
+        "name": "Embrace your digital content 7",
+        "desc": "Accessible every 60 minutes 7--"
       }, {
-        "name": "Uploading 23",
-        "desc": "Get in touch with our Sales team to discuss."
+        "name": "Embrace your digital content 8",
+        "desc": "Accessible every 60 minutes 8--"
       }, {
-        "name": "Uploading 24",
-        "desc": "Get in touch with our Sales team to discuss."
+        "name": "Embrace your digital content 9",
+        "desc": "Accessible every 60 minutes 9--"
+      }, {
+        "name": "Embrace your digital content 10",
+        "desc": "Accessible every 60 minutes 10--"
       }]
     ]
   },
@@ -499,5 +502,66 @@
       "name": "Cookies Policy",
       "link": "/"
     }]
+  },
+  "forms": {
+    "logIn": {
+      "title": "Log in",
+      "inputs": [{
+          "type": "email",
+          "label": "E-mail",
+          "placeholder": "carl@mail.com",
+          "error": "Please enter your email"
+        },
+        {
+          "type": "password",
+          "label": "Password",
+          "placeholder": "enter your password",
+          "error": "Please enter your password"
+        }
+      ],
+      "submit": "Log in",
+      "desc": "or",
+      "links": [{
+        "type": "link",
+        "text": "Forgot your password",
+        "link": "https://pics.io/forgot?email="
+      }, {
+        "type": "text",
+        "text": "or"
+      }, {
+        "type": "changeform",
+        "text": "have no account yet?"
+      }]
+    },
+    "singIn": {
+      "title": "Create your free account ",
+      "inputs": [{
+          "type": "email",
+          "label": "E-mail",
+          "placeholder": "carl@mail.com",
+          "error": "Please enter your email"
+        },
+        {
+          "type": "password",
+          "label": "Password",
+          "placeholder": "choose your password",
+          "error": "Please enter your password"
+        }
+      ],
+      "submit": "Register",
+      "desc": "or",
+      "links": [{
+        "type": "text",
+        "text": "Already have an account?",
+        "link": "/"
+      }, {
+        "type": "changeform",
+        "text": "Log in"
+      }]
+    },
+    "signInGoogle": "Sign in with Google",
+    "staticTitle": "Embrace your digital content",
+    "staticDesc": ["Free 14-day trial", "No credit card required", "Set up in 3 minutes or less"],
+    "staticButton": "Create your free account"
   }
 }

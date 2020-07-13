@@ -62,8 +62,8 @@ export default (props) => {
               {item.descLong}
             </span>
           </div>
-          <Button text={item.buttonText} bgAndNoHover="true" />
-        </div>
+          <Button text={item.buttonText} bg="true" dispatch={{ type: 'FORM_SINGIN-LOGIN-OPEN', payload: 'singin' }} />
+        </div>,
       );
     }
 
@@ -91,14 +91,18 @@ export default (props) => {
         const item = rates.optionsNames[i];
         arr.push(<div className="rates_options-item" key={i}>
           {item.map((elem, o) => (
-            <div className={`rates_options-row ${openRowsOptions.find((e) => e === +`1${out}${i}${o}`) ? 'rates_options-row-open' : ''}`}>
+            <div key={o} className={`rates_options-row ${openRowsOptions.find((e) => e === +`1${out}${i}${o}`) ? 'rates_options-row-open' : ''}`}>
               <span className="rates_options-cell" index={+`1${out}${i}${o}`} onClick={o === 0 ? clickRowOptions : null}>
-                {elem.name ? elem.name : elem}
+                <span>
+                  {elem.name ? elem.name : elem}
+                </span>
+                {elem.desc ? <span className="rates_options-cell-i">і</span> : ''}
+                {elem.desc ? (<span className="rates_options-cell-pop">{elem.desc}</span>) : ''}
               </span>
               {getOptions(out, i, o)}
             </div>
           ))}
-                 </div>);
+        </div>);
       }
       cartsOptions.push([...arr]);
       arr.length = 0;
@@ -113,7 +117,7 @@ export default (props) => {
     <div className={`rates_item rates_item-count-${count}`}>
       {count < 6 ? <Switcher /> : '' }
       {cartsOptions.map((item, index) => (
-        <div className="rates_item-cont">
+        <div key={index} className="rates_item-cont">
           <div className="rates_item-carts">
             {count === 6 ? <Switcher /> : '' }
             {cartsChunk ? cartsChunk[index] : ''}

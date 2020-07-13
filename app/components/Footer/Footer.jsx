@@ -19,7 +19,7 @@ export default () => {
                 {data.footer.socials ? (
                   <ul className="footer_social-list">
                     {data.footer.socials.map((item, index) => (
-                      <li className="footer_social-item">
+                      <li className="footer_social-item" key={index}>
                         <a href={item.linl}>
                           <svg className="svg-icon">
                             <use xlinkHref={`#icon-${item.name}`} xmlnsXlink="http://www.w3.org/1999/xlink" />

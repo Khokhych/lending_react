@@ -10,6 +10,8 @@ import Rates from './components/Rates/Rates';
 import Testimonial from './components/Testimonial/Testimonial';
 import Faq from './components/Faq/Faq';
 import Footer from './components/Footer/Footer';
+import FormStatic from './components/Forms/FormStatic/FormStatic';
+import FormSingInLogIn from './components/Forms/FormSingInLogIn/FormSingInLogIn';
 
 export default () => {
   const dispatch = useDispatch();
@@ -21,6 +23,7 @@ export default () => {
   getData();
   return (
     <div>
+      <FormSingInLogIn />
       <Svg />
       <Header />
       <Intro />
@@ -28,6 +31,7 @@ export default () => {
       <Rates />
       <Testimonial />
       <Faq />
+      <FormStatic />
       <Footer />
     </div>
   );
